@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour de Francia | Historia, Tienda y Más</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <a href="index.html" class="logo-area">
+                    <img src="imagenes/logo.png" alt="Logo Tour" class="logo-img">
+                    <span class="logo-text">TOUR<span class="logo-accent">FRANCIA</span></span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Abrir menú" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html" class="active">INICIO</a></li>
+                        <li><a href="Historia.html">HISTORIA</a></li>
+                        <li><a href="historia-tour-de-francia.html">EL TOUR</a></li>
+                        <li><a href="tienda.html">TIENDA</a></li>
+                        <li><a href="sostenibilidad.html">ECO</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <button class="cart-toggle-btn" onclick="toggleCarrito()" aria-label="Carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">LA GRANDE BOUCLE</span>
+                    <h2>Tour de Francia</h2>
+                    <p>Pasado, presente y futuro del ciclismo mundial. Descubre la historia, la tecnología y el equipamiento que definen la carrera más legendaria.</p>
+                    <div class="hero-btns">
+                        <a href="Historia.html" class="btn-hero btn-hero-primary">Explorar Historia</a>
+                        <a href="tienda.html" class="btn-hero btn-hero-secondary">Ver Tienda</a>
+                    </div>
+                </div>
+                <div class="hero-scroll-indicator">
+                    <span>Descubre</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </section>
+
+            <section class="section-container" id="inicio">
+                <div class="inicio-grid">
+                    <div class="inicio-texto">
+                        <span class="section-eyebrow">¿QUÉ ENCONTRARÁS AQUÍ?</span>
+                        <h2>Tu centro de ciclismo</h2>
+                        <p>El Tour de Francia es mucho más que una carrera: es el escenario donde la resistencia humana, la innovación técnica y la pasión por el ciclismo se fusionan cada verano. En esta plataforma hemos reunido todo lo que necesitas para sumergirte en ese universo.</p>
+                        <p>Desde la draisiana de 1817 hasta las bicicletas de carbono con cambios electrónicos del pelotón actual, recorremos más de dos siglos de evolución. Acompañamos cada hito con imágenes, contexto histórico y explicaciones pensadas tanto para el aficionado curioso como para el ciclista veterano que busca datos precisos.</p>
+                        <p>Nuestra tienda oficial complementa la experiencia con productos seleccionados del equipamiento profesional: maillots, cascos aerodinámicos, componentes de alta gama y bicicletas que han marcado época en la Grande Boucle. Todo con la calidad que exige el deporte de élite.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Línea de tiempo interactiva con hitos históricos.</li>
+                            <li><i class="fas fa-check-circle"></i> Artículos detallados sobre cada era y categoría del ciclismo.</li>
+                            <li><i class="fas fa-check-circle"></i> Tienda oficial con productos del pelotón profesional.</li>
+                            <li><i class="fas fa-check-circle"></i> Calculadora de impacto ambiental y guías de sostenibilidad.</li>
+                            <li><i class="fas fa-check-circle"></i> Contacto directo y formulario de feedback para la comunidad.</li>
+                        </ul>
+                    </div>
+                    <div class="gallery">
+                        <div class="img-box img-box-1">
+                            <img src="imagenes/taller_bici.jpg" alt="Taller antiguo" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a1a3a, #1a2a3a)';">
+                            <div class="img-box-overlay"><span>Artesanía</span></div>
+                        </div>
+                        <div class="img-box img-box-2">
+                            <img src="imagenes/tunel_viento.jpg" alt="Túnel de viento" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a2a3a, #0a1a2a)';">
+                            <div class="img-box-overlay"><span>Tecnología</span></div>
+                        </div>
+                        <div class="img-box img-box-3">
+                            <img src="imagenes/deporte_sigloxx.png" alt="Ciclismo clásico" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #3a2a1a, #2a1a1a)';">
+                            <div class="img-box-overlay"><span>Historia</span></div>
+                        </div>
+                        <div class="img-box img-box-4">
+                            <img src="imagenes/era_moderna.png" alt="Era moderna" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a1a2a, #0a0a1a)';">
+                            <div class="img-box-overlay"><span>Futuro</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATS BANNER -->
+            <section class="section-container">
+                <div class="stats-banner">
+                    <span class="section-eyebrow">EL TOUR EN CIFRAS</span>
+                    <h2 class="section-title" style="margin-bottom: 8px;">Números que Impresionan</h2>
+                    <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Más de un siglo de competición se resume en datos que definen la grandeza de la carrera.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">3.500<span>+</span></div>
+                            <div class="stat-label">Kilómetros por edición</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">111<span>ª</span></div>
+                            <div class="stat-label">Ediciones celebradas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">21</div>
+                            <div class="stat-label">Etapas por carrera</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">190<span>+</span></div>
+                            <div class="stat-label">Países en emisión global</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ETAPAS MÍTICAS -->
+            <section class="section-container">
+                <span class="section-eyebrow">MOMENTOS ÉPICOS</span>
+                <h2 class="section-title">Etapas que Hicieron Historia</h2>
+                <p class="section-subtitle">Algunas jornadas del Tour trascienden el deporte. Subidas infernales, sprints agónicos y gestas que el ciclismo jamás olvidará.</p>
+                <div class="stages-grid">
+                    <div class="stage-card">
+                        <div class="stage-card-image" style="background: linear-gradient(135deg, #2a1a0a, #3a2a1a);">
+                            <i class="fas fa-mountain"></i>
+                            <img src="imagenes/alpe_dhuez.jpg" alt="Alpe d'Huez" onerror="this.style.display='none';">
+                        </div>
+                        <div class="stage-card-body">
+                            <span class="stage-tag">Alpes</span>
+                            <h3>Alpe d'Huez</h3>
+                            <p>21 curvas de leyenda. Esta subida de 13,8 km al 8,1% de desnivel medio es el termómetro del Tour desde 1952. Sus hairpins numerados han visto las mayores hazañas y derrotas del pelotón.</p>
+                            <div class="stage-stat">
+                                <span><i class="fas fa-road"></i> 13,8 km</span>
+                                <span><i class="fas fa-chart-line"></i> 8,1%</span>
+                                <span><i class="fas fa-flag"></i> 1.115 m</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-card-image" style="background: linear-gradient(135deg, #1a2a3a, #2a3a4a);">
+                            <i class="fas fa-wind"></i>
+                            <img src="imagenes/mont_ventoux.jpg" alt="Mont Ventoux" onerror="this.style.display='none';">
+                        </div>
+                        <div class="stage-card-body">
+                            <span class="stage-tag">Provenza</span>
+                            <h3>Mont Ventoux</h3>
+                            <p>El Gigante de Provenza, con sus 1.909 metros, es una de las cimas más temidas. Sus últimos kilómetros sobre un paisaje lunar de piedra caliza son una batalla contra el viento, el oxígeno y uno mismo.</p>
+                            <div class="stage-stat">
+                                <span><i class="fas fa-road"></i> 21,5 km</span>
+                                <span><i class="fas fa-chart-line"></i> 7,5%</span>
+                                <span><i class="fas fa-flag"></i> 1.909 m</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-card-image" style="background: linear-gradient(135deg, #1a1a2a, #2a2a3a);">
+                            <i class="fas fa-city"></i>
+                            <img src="imagenes/campos_eliseos.jpg" alt="Campos Elíseos" onerror="this.style.display='none';">
+                        </div>
+                        <div class="stage-card-body">
+                            <span class="stage-tag">París</span>
+                            <h3>Campos Elíseos</h3>
+                            <p>Llegar a París es el sueño de todo corredor. Ocho vueltas a un circuito de 6,5 km alrededor del Arco de Triunfo cierran tres semanas de sufrimiento. El esprint final decide al último ganador.</p>
+                            <div class="stage-stat">
+                                <span><i class="fas fa-road"></i> 53,5 km</span>
+                                <span><i class="fas fa-clock"></i> Última etapa</span>
+                                <span><i class="fas fa-trophy"></i> Meta final</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-card-image" style="background: linear-gradient(135deg, #2a1a1a, #3a2a2a);">
+                            <i class="fas fa-bolt"></i>
+                            <img src="imagenes/tourmalet.jpg" alt="Tourmalet" onerror="this.style.display='none';">
+                        </div>
+                        <div class="stage-card-body">
+                            <span class="stage-tag">Pirineos</span>
+                            <h3>Tourmalet</h3>
+                            <p>El mítico puerto pirenaico, con 2.115 metros de altitud, es el paso más alto del Tour. Sus rampas del 10% durante 19 km han sido testigos de las batallas más encarnizadas entre los grandes del pelotón.</p>
+                            <div class="stage-stat">
+                                <span><i class="fas fa-road"></i> 19 km</span>
+                                <span><i class="fas fa-chart-line"></i> 7,4%</span>
+                                <span><i class="fas fa-flag"></i> 2.115 m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEYENDAS -->
+            <section class="section-container">
+                <span class="section-eyebrow">LOS INMORTALES</span>
+                <h2 class="section-title">Leyendas del Pelotón</h2>
+                <p class="section-subtitle">Hombres que definieron épocas, rompieron récords y elevaron el ciclismo a la categoría de arte. Sus nombres están grabados en la memoria del Tour.</p>
+                <div class="legends-grid">
+                    <div class="legend-card">
+                        <div class="legend-avatar"><i class="fas fa-crown"></i><img src="imagenes/merckx.jpg" alt="Eddy Merckx" onerror="this.style.display='none';"></div>
+                        <h3>Eddy Merckx</h3>
+                        <div class="legend-subtitle">El Caníbal</div>
+                        <p>Considerado el mejor ciclista de todos los tiempos. Su apodo lo dice todo: devoraba a sus rivales con una sed de victoria insaciable. Cinco Tours, cinco Giros, tres Mundiales y un palmarés que abruma.</p>
+                        <div class="legend-stats">
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">5</span>
+                                <span class="legend-stat-label">Tours</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">525</span>
+                                <span class="legend-stat-label">Victorias</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">34</span>
+                                <span class="legend-stat-label">Etapas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="legend-card">
+                        <div class="legend-avatar"><i class="fas fa-chess-king"></i><img src="imagenes/hinault.jpg" alt="Bernard Hinault" onerror="this.style.display='none';"></div>
+                        <h3>Bernard Hinault</h3>
+                        <div class="legend-subtitle">El Tejón</div>
+                        <p>El último gran patrón francés. Carisma, fiereza y un instinto competitivo fuera de serie. Ganó cinco Tours, tres Giros y dos Vueltas. Nadie ha igualado su palmarés completo en Grandes Vueltas.</p>
+                        <div class="legend-stats">
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">5</span>
+                                <span class="legend-stat-label">Tours</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">3</span>
+                                <span class="legend-stat-label">Giros</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">28</span>
+                                <span class="legend-stat-label">Etapas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="legend-card">
+                        <div class="legend-avatar"><i class="fas fa-stopwatch"></i><img src="imagenes/indurain.jpg" alt="Miguel Induráin" onerror="this.style.display='none';"></div>
+                        <h3>Miguel Induráin</h3>
+                        <div class="legend-subtitle">El Rey del Crono</div>
+                        <p>Sangre fría, precisión suiza y una zancada hipnótica. Dominó el Tour entre 1991 y 1995 con cinco victorias consecutivas. Su contrarreloj era un espectáculo de biomecánica perfecta sobre el asfalto.</p>
+                        <div class="legend-stats">
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">5</span>
+                                <span class="legend-stat-label">Tours</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">12</span>
+                                <span class="legend-stat-label">Etapas</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">1</span>
+                                <span class="legend-stat-label">Récord/hora</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="legend-card">
+                        <div class="legend-avatar"><i class="fas fa-feather"></i><img src="imagenes/anquetil.jpg" alt="Jacques Anquetil" onerror="this.style.display='none';"></div>
+                        <h3>Jacques Anquetil</h3>
+                        <div class="legend-subtitle">Maestro de la Elegancia</div>
+                        <p>El primer pentacampeón del Tour. Una elegancia sobre la bicicleta que ocultaba una voluntad de hierro. Dominaba la contrarreloj con una técnica impecable y fue pionero en la preparación científica.</p>
+                        <div class="legend-stats">
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">5</span>
+                                <span class="legend-stat-label">Tours</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">1</span>
+                                <span class="legend-stat-label">Giro</span>
+                            </div>
+                            <div class="legend-stat-item">
+                                <span class="legend-stat-number">16</span>
+                                <span class="legend-stat-label">Etapas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INNOVACIÓN -->
+            <section class="section-container">
+                <span class="section-eyebrow">INGENIERÍA CICLISTA</span>
+                <h2 class="section-title">Innovación sobre Ruedas</h2>
+                <p class="section-subtitle">La tecnología ha transformado cada aspecto de la bicicleta. Del hierro al carbono, del cable a lo inalámbrico. Así ha evolucionado la máquina.</p>
+                <div class="innovation-grid">
+                    <div class="innovation-card">
+                        <div class="innovation-icon"><i class="fas fa-flask"></i><img src="imagenes/fibra_carbono.jpg" alt="Fibra de carbono" onerror="this.style.display='none';"></div>
+                        <h3>Fibra de Carbono</h3>
+                        <p>Conocida como el "oro negro" del ciclismo, la fibra de carbono revolucionó los cuadros en los años 90. Hoy, las bicicletas del Tour pesan menos de 6,8 kg, el mínimo reglamentario, sin sacrificar rigidez ni absorción de vibraciones. Los ingenieros moldean capas de carbono con orientaciones precisas para optimizar cada zona del cuadro.</p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon"><i class="fas fa-microchip"></i><img src="imagenes/grupo_electronico.jpg" alt="Grupo electrónico" onerror="this.style.display='none';"></div>
+                        <h3>Grupos Electrónicos</h3>
+                        <p>Shimano Di2, SRAM eTap y Campagnolo EPS han eliminado los cables de cambio. Con pulsos eléctricos y baterías de larga duración, los cambios son instantáneos y precisos incluso bajo la máxima carga en las rampas más duras del Alpe d'Huez. La sincronización automática entre platos y piñones optimiza la cadencia al instante.</p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon"><i class="fas fa-wind"></i><img src="imagenes/tunel_viento_bici.jpg" alt="Túnel de viento" onerror="this.style.display='none';"></div>
+                        <h3>Aerodinámica Extrema</h3>
+                        <p>Cada gramo de resistencia al viento cuenta. Los túneles de viento son tan importantes como los entrenamientos. Cuadros de perfil NACA, ruedas de 80mm, cascos integrados y maillots cosidos al milímetro. A 50 km/h, el 90% de la potencia del ciclista se emplea en vencer el aire. Reducir esa resistencia es la obsesión moderna.</p>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon"><i class="fas fa-chart-bar"></i><img src="imagenes/potenciometro.jpg" alt="Potenciómetro" onerror="this.style.display='none';"></div>
+                        <h3>Potenciómetros y Datos</h3>
+                        <p>El ciclismo profesional es hoy una ciencia de datos. Los potenciómetros miden cada vatio generado, permitiendo a los directores deportivos saber en tiempo real el esfuerzo de cada corredor. La frecuencia cardíaca, la potencia, la cadencia y la velocidad se cruzan para decidir cada ataque y cada relevo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CULTURA CICLISTA -->
+            <section class="section-container">
+                <span class="section-eyebrow">SABIDURÍA SOBRE RUEDAS</span>
+                <h2 class="section-title">Cultura y Consejos</h2>
+                <p class="section-subtitle">El ciclismo es mucho más que pedalear. Técnica, nutrición, mentalidad y respeto por la carretera forman parte del ADN de todo ciclista.</p>
+                <div class="culture-grid">
+                    <div class="culture-card">
+                        <div class="culture-card-icon"><i class="fas fa-heartbeat"></i><img src="imagenes/ciclista_entreno.jpg" alt="Entrenamiento" onerror="this.style.display='none';"></div>
+                        <h3>Entrenamiento Inteligente</h3>
+                        <p>No se trata solo de acumular kilómetros. El entrenamiento por intervalos, la progresión de carga y el descanso activo son las claves del desarrollo. Los profesionales alternan rodajes largos de baja intensidad con series explosivas que simulan los esfuerzos del Tour. Escuchar al cuerpo es el primer mandamiento.</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-card-icon"><i class="fas fa-apple-alt"></i><img src="imagenes/nutricion_ciclismo.jpg" alt="Nutrición" onerror="this.style.display='none';"></div>
+                        <h3>Nutrición sobre la Marcha</h3>
+                        <p>Una etapa de montaña quema entre 6.000 y 8.000 calorías. La alimentación del ciclista es constante y estratégica: geles, barritas, frutos secos y bebidas isotónicas se consumen cada 20-30 minutos. La hidratación es todavía más crítica: perder solo el 2% del peso corporal en agua reduce el rendimiento hasta un 10%.</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-card-icon"><i class="fas fa-shield-alt"></i><img src="imagenes/peloton.jpg" alt="Seguridad" onerror="this.style.display='none';"></div>
+                        <h3>Seguridad Vial</h3>
+                        <p>Compartir la carretera exige respeto mutuo. Señalizar los giros, mantener la línea, usar luces incluso de día y anticipar los movimientos del tráfico son hábitos que salvan vidas. El casco no es negociable, y un buen juego de frenos puede marcar la diferencia entre una caída y una anécdota.</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-card-icon"><i class="fas fa-users"></i><img src="imagenes/peloton_grupo.jpg" alt="Comunidad" onerror="this.style.display='none';"></div>
+                        <h3>Comunidad y Respeto</h3>
+                        <p>El pelotón es un organismo vivo donde la cooperación es ley. Relevarse, compartir el viento y cuidar al compañero caído son valores grabados a fuego. Fuera de la competición, los clubes ciclistas son el alma del deporte: rutas compartidas, talleres colaborativos y una pasión que une generaciones.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FRASES CÉLEBRES -->
+            <section class="section-container">
+                <span class="section-eyebrow">PALABRAS QUE INSPIRAN</span>
+                <h2 class="section-title">Voces del Pelotón</h2>
+                <p class="section-subtitle">Las mejores frases del ciclismo, dichas por quienes sintieron el asfalto, el viento y la gloria del Tour.</p>
+                <div class="quotes-grid">
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <blockquote>El Tour de Francia no se gana con las piernas, se gana con el corazón.</blockquote>
+                        <div class="quote-author">
+                            <div class="quote-author-avatar"><i class="fas fa-crown"></i></div>
+                            <div class="quote-author-info">
+                                <strong>Eddy Merckx</strong>
+                                <span>5 veces campeón del Tour</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <blockquote>Nunca he visto a nadie sufrir tanto como yo en el Tour. Y sin embargo, cada año vuelvo.</blockquote>
+                        <div class="quote-author">
+                            <div class="quote-author-avatar"><i class="fas fa-shield-haltered"></i></div>
+                            <div class="quote-author-info">
+                                <strong>Bernard Hinault</strong>
+                                <span>5 veces campeón del Tour</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <blockquote>La bicicleta es la máquina perfecta. Transforma la energía humana en movimiento con una eficiencia que ningún motor iguala.</blockquote>
+                        <div class="quote-author">
+                            <div class="quote-author-avatar"><i class="fas fa-bolt"></i></div>
+                            <div class="quote-author-info">
+                                <strong>Miguel Induráin</strong>
+                                <span>5 veces campeón del Tour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-container" style="margin-top: 0; padding-top: 0;">
+                <div class="trinket-embed">
+                    <iframe src="https://trinket.io/embed/python3/56df275258dc?outputOnly=true&runOption=run" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3><i class="fas fa-envelope"></i> Contacto</h3>
+                    <p>info@tourdefrancia.com</p>
+                    <p>+34 912 345 678</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tienda.html">Tienda Oficial</a></li>
+                        <li><a href="Historia.html">Línea de Tiempo</a></li>
+                        <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bicicletas A Lo Largo De La Historia. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="carrito-flotante" class="cart-box">
+        <div class="cart-header">
+            <span><i class="fas fa-shopping-bag"></i> Tu Cesta</span>
+            <button onclick="toggleCarrito()" aria-label="Cerrar carrito"><i class="fas fa-times"></i></button>
+        </div>
+        <ul id="lista-carrito"><li class="empty-msg">Tu cesta está vacía</li></ul>
+        <div class="cart-footer">
+            <p>Total: <strong><span id="total-precio">0</span> €</strong></p>
+            <button class="pay-btn" onclick="pagar()">Pagar Ahora</button>
+        </div>
+    </div>
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

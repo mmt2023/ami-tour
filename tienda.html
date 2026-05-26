@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Oficial | Tour de Francia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <a href="index.html" class="logo-area">
+                    <img src="imagenes/logo.png" alt="Logo Tour" class="logo-img">
+                    <span class="logo-text">TOUR<span class="logo-accent">FRANCIA</span></span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Abrir menú" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="Historia.html">HISTORIA</a></li>
+                        <li><a href="historia-tour-de-francia.html">EL TOUR</a></li>
+                        <li><a href="tienda.html" class="active">TIENDA</a></li>
+                        <li><a href="sostenibilidad.html">ECO</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <button class="cart-toggle-btn" onclick="toggleCarrito()" aria-label="Carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-container shop-section">
+                <span class="section-eyebrow">EQUIPAMIENTO PROFESIONAL</span>
+                <h2 class="section-title">Tienda Oficial</h2>
+                <p class="section-subtitle">Productos utilizados por los campeones del mundo. Calidad profesional para tu pasión.</p>
+
+                <div class="shop-controls">
+                    <div class="filter-btns">
+                        <button class="filter-btn active" onclick="filtrarProductos('todos')">Todos</button>
+                        <button class="filter-btn" onclick="filtrarProductos('bici')">Bicicletas</button>
+                        <button class="filter-btn" onclick="filtrarProductos('ropa')">Ropa</button>
+                        <button class="filter-btn" onclick="filtrarProductos('accesorios')">Accesorios</button>
+                        <button class="filter-btn" onclick="filtrarProductos('componentes')">Componentes</button>
+                    </div>
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="search-input" placeholder="Buscar producto..." oninput="buscarProductos()">
+                    </div>
+                </div>
+
+                <div class="shop-grid">
+                    <div class="product-card" data-cat="bici">
+                        <div class="product-badge">Top Ventas</div>
+                        <div class="product-img">
+                            <img src="imagenes/bici_carretera.png" alt="Pinarello Dogma F" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a1a2a, #2a1a3a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Bicicleta</span>
+                            <h3>Pinarello Dogma F</h3>
+                            <p>La bicicleta ganadora del último Tour. Aerodinámica pura con cuadro de carbono de alto módulo.</p>
+                            <p class="price">12.000 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Pinarello Dogma F', 12000)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="bici">
+                        <div class="product-img">
+                            <img src="imagenes/bici_montana.png" alt="S-Works Epic" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a1a1a, #3a2a1a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Bicicleta</span>
+                            <h3>S-Works Epic</h3>
+                            <p>Doble suspensión para los terrenos más difíciles. Ligereza y control absoluto.</p>
+                            <p class="price">9.500 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('S-Works Epic', 9500)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="ropa">
+                        <div class="product-badge badge-yellow">Oficial</div>
+                        <div class="product-img">
+                            <img src="imagenes/maillot.png" alt="Maillot Amarillo" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #3a3a1a, #2a2a0a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Ropa</span>
+                            <h3>Maillot Amarillo</h3>
+                            <p>La prenda oficial del líder de la carrera. Tejido transpirable de alta tecnología.</p>
+                            <p class="price">120 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Maillot Amarillo', 120)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="accesorios">
+                        <div class="product-img">
+                            <img src="imagenes/casco.png" alt="Casco Aero" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a2a2a, #0a1a1a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Accesorio</span>
+                            <h3>Casco Aero</h3>
+                            <p>Protección y velocidad con ventilación máxima. Diseño probado en túnel de viento.</p>
+                            <p class="price">250 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Casco Aero', 250)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="componentes">
+                        <div class="product-img">
+                            <img src="imagenes/ruedas_aero.png" alt="Ruedas Aero" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a1a2a, #1a0a1a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Componente</span>
+                            <h3>Juego de Ruedas Aero</h3>
+                            <p>Perfil de 80mm para cortar el viento. Rodamientos cerámicos de alta precisión.</p>
+                            <p class="price">1.000 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Juego de Ruedas Aero', 1000)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="componentes">
+                        <div class="product-img">
+                            <img src="imagenes/pedales.png" alt="Pedales Automáticos" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a1a1a, #2a2a2a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Componente</span>
+                            <h3>Pedales Automáticos</h3>
+                            <p>Bloqueo rápido para una eficiente transferencia de potencia en cada pedalada.</p>
+                            <p class="price">150 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Pedales Automáticos', 150)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="accesorios">
+                        <div class="product-img">
+                            <img src="imagenes/bidon.png" alt="Bidón Térmico" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a3a2a, #1a2a1a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Accesorio</span>
+                            <h3>Bidón Térmico</h3>
+                            <p>Mantiene tu bebida fresca por horas. Diseño ergonómico para fácil agarre.</p>
+                            <p class="price">30 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Bidón Térmico', 30)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="accesorios">
+                        <div class="product-img">
+                            <img src="imagenes/camara.png" alt="Cámara de Repuesto" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a1a3a, #0a0a2a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Accesorio</span>
+                            <h3>Cámara de Repuesto</h3>
+                            <p>Talla 700x23-28, resistente a pinchazos. Imprescindible en cada salida.</p>
+                            <p class="price">25 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Cámara de Repuesto', 25)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-cat="ropa">
+                        <div class="product-img">
+                            <img src="imagenes/guantes.png" alt="Guantes Pro" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #3a1a1a, #2a0a0a)';">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Ropa</span>
+                            <h3>Guantes Pro</h3>
+                            <p>Amortiguación estratégica y ventilación. Máximo confort en rutas largas.</p>
+                            <p class="price">45 <span>€</span></p>
+                            <button onclick="agregarAlCarrito('Guantes Pro', 45)" class="btn-add-cart"><i class="fas fa-cart-plus"></i> Añadir</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3><i class="fas fa-envelope"></i> Contacto</h3>
+                    <p>info@tourdefrancia.com</p>
+                    <p>+34 912 345 678</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tienda.html">Tienda Oficial</a></li>
+                        <li><a href="Historia.html">Línea de Tiempo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bicicletas A Lo Largo De La Historia.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="carrito-flotante" class="cart-box">
+        <div class="cart-header">
+            <span><i class="fas fa-shopping-bag"></i> Tu Cesta</span>
+            <button onclick="toggleCarrito()" aria-label="Cerrar carrito"><i class="fas fa-times"></i></button>
+        </div>
+        <ul id="lista-carrito"><li class="empty-msg">Tu cesta está vacía</li></ul>
+        <div class="cart-footer">
+            <p>Total: <strong><span id="total-precio">0</span> €</strong></p>
+            <button class="pay-btn" onclick="pagar()">Pagar Ahora</button>
+        </div>
+    </div>
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

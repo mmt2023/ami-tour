@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia - Línea de Tiempo | Tour de Francia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <a href="index.html" class="logo-area">
+                    <img src="imagenes/logo.png" alt="Logo Tour" class="logo-img">
+                    <span class="logo-text">TOUR<span class="logo-accent">FRANCIA</span></span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Abrir menú" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="Historia.html" class="active">HISTORIA</a></li>
+                        <li><a href="historia-tour-de-francia.html">EL TOUR</a></li>
+                        <li><a href="tienda.html">TIENDA</a></li>
+                        <li><a href="sostenibilidad.html">ECO</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <button class="cart-toggle-btn" onclick="toggleCarrito()" aria-label="Carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-container timeline-section">
+                <span class="section-eyebrow">EVOLUCIÓN DE LA BICICLETA</span>
+                <h2 class="section-title">Línea del Tiempo</h2>
+                <p class="section-subtitle">Desde la draisiana hasta la era del carbono. Navega por los hitos que transformaron el ciclismo.</p>
+
+                <div class="carousel-container" id="timelineCarousel">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide" data-year="1817">
+                            <div class="slide-image">
+                                <img src="imagenes/draisiana.png" alt="Draisiana" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2c1a0a, #3a2510)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1817</span>
+                                <h3>La Draisiana</h3>
+                                <p>Todo empezó sin pedales. El usuario debía impulsarse empujando el suelo con los pies. Karl Drais inventó este precursor de la bicicleta en Alemania.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="1860">
+                            <div class="slide-image">
+                                <img src="imagenes/pierre.png" alt="Michaux" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a2c1a, #0a1a0a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1860</span>
+                                <h3>Llegan los Pedales</h3>
+                                <p>Pierre Michaux añadió pedales a la rueda delantera. Conocidas como "Sacudehuesos", fueron el primer paso hacia la bicicleta moderna.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="1870">
+                            <div class="slide-image">
+                                <img src="imagenes/gran_velocipedo.png" alt="Penny Farthing" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a1a2a, #1a0a1a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1870</span>
+                                <h3>Penny-Farthing</h3>
+                                <p>Rueda delantera gigante para ganar velocidad. Muy peligrosas y propensas a caídas espectaculares sobre el manillar.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="1885">
+                            <div class="slide-image">
+                                <img src="imagenes/bicicleta_seguridad.png" alt="Safety Bike" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a2a3a, #0a1a2a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1885</span>
+                                <h3>La Bicicleta de Seguridad</h3>
+                                <p>John Kemp Starley definió la forma moderna: dos ruedas iguales y transmisión por cadena. El diseño que cambió todo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="1903">
+                            <div class="slide-image">
+                                <img src="imagenes/deporte_sigloxx.png" alt="Tour 1903" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #3a2a1a, #2a1a0a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1903</span>
+                                <h3>Nace el Tour</h3>
+                                <p>Primera edición del Tour de Francia. Bicicletas de acero pesado, sin cambios, y etapas que hoy parecen inhumanas.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="1937">
+                            <div class="slide-image">
+                                <img src="imagenes/desviador_1937.png" alt="Desviador 1937" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a1a1a, #3a1a1a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1937</span>
+                                <h3>Los Cambios de Marcha</h3>
+                                <p>El Tour permite por primera vez el uso de desviadores. Los ciclistas ya no tienen que bajarse para cambiar de piñón en las montañas.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="1989">
+                            <div class="slide-image">
+                                <img src="imagenes/lemond_1989.png" alt="Greg LeMond 1989" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a3a2a, #0a2a1a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1989</span>
+                                <h3>Revolución Aerodinámica</h3>
+                                <p>Greg LeMond gana el Tour por solo 8 segundos usando manillar de triatlón y casco aerodinámico. La resistencia al viento se vuelve prioridad máxima.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="1990">
+                            <div class="slide-image">
+                                <img src="imagenes/carbono_1990.png" alt="Bicicleta de Carbono" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a1a3a, #0a0a2a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">1990</span>
+                                <h3>La Era del Carbono</h3>
+                                <p>El acero y el aluminio dan paso a la fibra de carbono. Cuadros ultraligeros, rígidos y con formas moldeadas al milímetro.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="2009">
+                            <div class="slide-image">
+                                <img src="imagenes/electronico_2009.png" alt="Cambios Electrónicos" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a2a1a, #1a1a0a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">2009</span>
+                                <h3>Cambios Electrónicos</h3>
+                                <p>Comienza la era de la electrónica en el pelotón. Cambios de precisión con batería que revolucionan la competición.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" data-year="HOY">
+                            <div class="slide-image">
+                                <img src="imagenes/era_moderna.png" alt="Era Moderna" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #0a1a2a, #0a2a3a)';">
+                            </div>
+                            <div class="slide-info">
+                                <span class="slide-year">HOY</span>
+                                <h3>Era Moderna</h3>
+                                <p>Carbono de alto módulo, cambios electrónicos inalámbricos, aerodinámica extrema y potenciómetros integrados. La cumbre de la ingeniería ciclista.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel(-1)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel(1)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3><i class="fas fa-envelope"></i> Contacto</h3>
+                    <p>info@tourdefrancia.com</p>
+                    <p>+34 912 345 678</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tienda.html">Tienda Oficial</a></li>
+                        <li><a href="Historia.html">Línea de Tiempo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bicicletas A Lo Largo De La Historia.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="carrito-flotante" class="cart-box">
+        <div class="cart-header">
+            <span><i class="fas fa-shopping-bag"></i> Tu Cesta</span>
+            <button onclick="toggleCarrito()" aria-label="Cerrar carrito"><i class="fas fa-times"></i></button>
+        </div>
+        <ul id="lista-carrito"><li class="empty-msg">Tu cesta está vacía</li></ul>
+        <div class="cart-footer">
+            <p>Total: <strong><span id="total-precio">0</span> €</strong></p>
+            <button class="pay-btn" onclick="pagar()">Pagar Ahora</button>
+        </div>
+    </div>
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

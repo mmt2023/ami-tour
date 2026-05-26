@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tour de Francia | Historia de la Grande Boucle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-inner">
+                <a href="index.html" class="logo-area">
+                    <img src="imagenes/logo.png" alt="Logo Tour" class="logo-img">
+                    <span class="logo-text">TOUR<span class="logo-accent">FRANCIA</span></span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Abrir menú" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="Historia.html">HISTORIA</a></li>
+                        <li><a href="historia-tour-de-francia.html" class="active">EL TOUR</a></li>
+                        <li><a href="tienda.html">TIENDA</a></li>
+                        <li><a href="sostenibilidad.html">ECO</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <button class="cart-toggle-btn" onclick="toggleCarrito()" aria-label="Carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="article-hero">
+                <div class="article-hero-overlay"></div>
+                <div class="article-hero-content">
+                    <span class="section-eyebrow">LA GRANDE BOUCLE</span>
+                    <h1>El Siglo de Oro del Ciclismo</h1>
+                    <p>Desde 1903, el Tour de Francia escribe las páginas más épicas del deporte sobre ruedas.</p>
+                </div>
+            </div>
+
+            <section class="section-container article-section">
+                <article class="article-content">
+                    <p class="article-intro">El Tour de Francia no es simplemente una carrera de bicicletas; es un monumento vivo a la resistencia humana. Lo que comenzó en 1903 como una estrategia desesperada de marketing para salvar un periódico deportivo, terminó convirtiéndose en el escenario de las mayores gestas y tragedias del deporte moderno.</p>
+
+                    <div class="article-block">
+                        <div class="article-text">
+                            <h3><span class="accent-line"></span> Los Orígenes</h3>
+                            <p>La génesis del Tour tiene poco de romántica y mucho de audacia empresarial. <strong>Henri Desgrange</strong>, editor del diario <em>L'Auto</em>, necesitaba un golpe de efecto para hundir a su competencia. Su idea fue tan simple como brutal: una carrera que recorriera Francia entera, dividida en etapas, con premios suficientes para atraer a los hombres más duros del país.</p>
+                            <p>Aquellos pioneros de 1903 no eran atletas de élite en el sentido moderno, sino aventureros que pedaleaban sobre máquinas de hierro de 15 kilos por caminos sin asfaltar, a menudo durante toda la noche. De los 60 participantes iniciales, solo 21 lograron completar las 2.428 kilómetros de la primera edición. El ganador, <strong>Maurice Garin</strong>, empleó más de 94 horas sobre la bicicleta a una media de apenas 25 km/h.</p>
+                            <p>Lo que nació como una estrategia para vender periódicos se convirtió en el fenómeno deportivo más longevo del planeta. Correr el Tour se transformó en la prueba de fuego del ciclismo mundial, una gesta que cada año desafía los límites del cuerpo humano.</p>
+                        </div>
+                        <div class="article-image">
+                            <img src="imagenes/Henri-Desgrange-profimedia-0287458553.jpg" alt="Henri Desgrange" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a1a2a, #2a1a3a)';">
+                            <span class="image-caption">Henri Desgrange, padre del Tour de Francia</span>
+                        </div>
+                    </div>
+
+                    <div class="article-block reverse">
+                        <div class="article-image">
+                            <img src="imagenes/miguel-indurain-en-1995-tras-ganar-su-quinto-tour-consecutivo.jpeg" alt="Miguel Induráin" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2a2a1a, #3a2a1a)';">
+                            <span class="image-caption">Miguel Induráin, pentacampeón del Tour</span>
+                        </div>
+                        <div class="article-text">
+                            <h3><span class="accent-line"></span> El Color de la Victoria</h3>
+                            <p>Si hay un símbolo que define al Tour es el <strong>Maillot Jaune</strong>. Introducido en 1919 para que el público pudiera identificar al líder entre el polvo y el cansancio de la ruta, su color amarillo se convirtió en el objeto de deseo más preciado del deporte.</p>
+                            <p>Con el paso de las décadas nacieron el maillot verde para premiar la regularidad y los icónicos puntos rojos para el mejor escalador.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <blockquote>"El Tour de Francia es el escenario donde se escribe la historia a base de sudor, épica y una voluntad inquebrantable."</blockquote>
+                    </div>
+
+                    <h3><span class="accent-line"></span> Dinastías y Duelos al Sol</h3>
+                    <p>La historia del Tour se cuenta a través de sus grandes dominadores y de los duelos que paralizaron naciones enteras. Cada década ha tenido sus héroes, sus rivalidades y sus momentos de gloria. Hemos sido testigos de eras que definieron generaciones enteras de aficionados al ciclismo:</p>
+
+                    <div class="champions-grid">
+                        <div class="champion-card">
+                            <div class="champion-icon"><i class="fas fa-crown"></i></div>
+                            <h4>Jacques Anquetil</h4>
+                            <p>Elegancia técnica. El primer hombre en sumar cinco coronas, dominando tanto la contrarreloj como la montaña con una sobriedad que escondía un corazón de campeón.</p>
+                        </div>
+                        <div class="champion-card">
+                            <div class="champion-icon"><i class="fas fa-bolt"></i></div>
+                            <h4>Eddy Merckx</h4>
+                            <p>Apodado "El Caníbal". No dejaba ni las migajas a sus rivales. Once Grandes Vueltas, tres Mundiales y todas las clásicas del calendario. El más grande.</p>
+                        </div>
+                        <div class="champion-card">
+                            <div class="champion-icon"><i class="fas fa-shield-haltered"></i></div>
+                            <h4>Bernard Hinault</h4>
+                            <p>El último gran patrón francés. Carisma, fuerza y una determinación de hierro. Cinco Tours, tres Giros y dos Vueltas. Un palmarés sin parangón.</p>
+                        </div>
+                        <div class="champion-card">
+                            <div class="champion-icon"><i class="fas fa-clock"></i></div>
+                            <h4>Miguel Induráin</h4>
+                            <p>Sangre fría y precisión. Convirtió la contrarreloj en un arte científico durante los años 90. Cinco Tours consecutivos entre 1991 y 1995.</p>
+                        </div>
+                    </div>
+
+                    <p>Pero el Tour también son las rivalidades que trascienden generaciones: <strong>Coppi contra Bartali</strong> dividió Italia en los años 40; <strong>Fignon contra Lemond</strong> nos regaló el duelo más ajustado de la historia por apenas 8 segundos en 1989; y la era moderna nos trajo a <strong>Lance Armstrong</strong>, cuyo legado quedó marcado por la controversia del dopaje que sacudió los cimientos del deporte.</p>
+                    <p>Hoy, nombres como <strong>Tadej Pogačar</strong>, <strong>Jonas Vingegaard</strong> y <strong>Primož Roglič</strong> escriben un nuevo capítulo, con ataques desde lejos, potencias estratosféricas y un nivel que no deja de sorprender al mundo.</p>
+
+                    <!-- DATOS CURIOSOS -->
+                    <div class="article-highlight" style="margin-top: 50px;">
+                        <i class="fas fa-lightbulb"></i>
+                        <blockquote>Sabías que... En 1919, Eugène Christophe reparó su horquilla rota en una fragua y perdió 4 horas, pero la gesta lo convirtió en leyenda. Es el origen del maillot de mejor luchador.</blockquote>
+                    </div>
+
+                    <h3 style="margin-top: 50px;"><span class="accent-line"></span> Curiosidades del Tour</h3>
+                    <p>Más de un siglo de competición ha dejado historias fascinantes que pocos conocen. Datos, anécdotas y récords que demuestran que el Tour es mucho más que una carrera.</p>
+                    <div class="facts-list">
+                        <div class="fact-item">
+                            <div class="fact-icon"><i class="fas fa-tshirt"></i></div>
+                            <div class="fact-text">
+                                <h4>El Amarillo no era amarillo</h4>
+                                <p>El maillot amarillo se introdujo en 1919, pero no porque el amarillo fuera el color del liderato, sino porque el periódico L'Auto se imprimía en papel amarillo.</p>
+                            </div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon"><i class="fas fa-tint"></i></div>
+                            <div class="fact-text">
+                                <h4>Sudor y Litros</h4>
+                                <p>Un corredor del Tour puede perder entre 6 y 10 litros de agua al día en etapas de calor extremo. Beber y beber es la regla de supervivencia.</p>
+                            </div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon"><i class="fas fa-bicycle"></i></div>
+                            <div class="fact-text">
+                                <h4>Bicicletas de 15.000 €</h4>
+                                <p>Las bicicletas de los equipos profesionales cuestan entre 10.000 y 15.000 euros. Con cambios electrónicos, ruedas de carbono y potenciómetros integrados.</p>
+                            </div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon"><i class="fas fa-heart"></i></div>
+                            <div class="fact-text">
+                                <h4>El Corazón del Campeón</h4>
+                                <p>La frecuencia cardíaca de un ciclista del Tour puede permanecer por encima de 160 pulsaciones durante más de 5 horas seguidas en las etapas de alta montaña.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-block">
+                        <div class="article-text">
+                            <h3><span class="accent-line"></span> El Tour en el Siglo XXI</h3>
+                            <p>Hoy, el Tour de Francia es un espectáculo global que llega a 190 países con una audiencia acumulada de más de 3.500 millones de espectadores. Las bicicletas de acero han dado paso a naves espaciales de carbono de alto módulo, y los ciclistas son monitorizados al milímetro por equipos científicos con nutricionistas, psicólogos y entrenadores que analizan cada vatio.</p>
+                            <p>Sin embargo, cuando el asfalto se empina en el Mont Ventoux o el Alpe d'Huez, la tecnología pasa a un segundo plano. Sigue siendo el mismo desafío de hace un siglo: un hombre, una máquina y el deseo infinito de llegar primero a los Campos Elíseos de París. La esencia del Tour, esa mezcla de sufrimiento y gloria, permanece intacta.</p>
+                            <p>Las nuevas generaciones han traído un estilo de carrera más explosivo y agresivo. Los ataques desde lejos, las dobles ascensiones a puertos icónicos y la irrupción de corredores cada vez más jóvenes están redefiniendo lo que creíamos posible sobre dos ruedas. El Tour del siglo XXI es más rápido, más táctico y más global que nunca.</p>
+                        </div>
+                        <div class="article-image">
+                            <img src="imagenes/co-tourdefrancehistory2-en-plt.jpeg" alt="Tour moderno" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1a2a3a, #0a1a2a)';">
+                            <span class="image-caption">El pelotón moderno en acción</span>
+                        </div>
+                    </div>
+
+                    <!-- ESTADÍSTICAS -->
+                    <div class="stats-banner" style="margin-top: 40px;">
+                        <span class="section-eyebrow">DATOS CLAVE</span>
+                        <h2 class="section-title" style="margin-bottom: 8px;">El Tour en Números</h2>
+                        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">Las cifras que definen la carrera más exigente del planeta.</p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">1903</div>
+                                <div class="stat-label">Primera edición</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2.428</div>
+                                <div class="stat-label">KM en 1903 vs 3.500+ hoy</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">60</div>
+                                <div class="stat-label">Participantes en la primera edición</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">94h</div>
+                                <div class="stat-label">Tiempo del ganador en 1903</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ETAPAS MÍTICAS EN EL TOUR -->
+                    <h3 style="margin-top: 50px;"><span class="accent-line"></span> Las Etapas que Definen al Tour</h3>
+                    <p>Cada año, el recorrido del Tour selecciona los puertos y terrenos que pondrán a prueba a los mejores. Algunas cimas se han convertido en símbolos, y cada vez que el pelotón las afronta, la historia se escribe de nuevo.</p>
+
+                    <div class="stages-grid" style="margin-top: 20px;">
+                        <div class="stage-card">
+                            <div class="stage-card-image" style="background: linear-gradient(135deg, #2a1a0a, #3a2a1a);">
+                                <i class="fas fa-mountain"></i>
+                                <img src="imagenes/alpe_dhuez.jpg" alt="Alpe d'Huez" onerror="this.style.display='none';">
+                            </div>
+                            <div class="stage-card-body">
+                                <span class="stage-tag">Alpes</span>
+                                <h3>Alpe d'Huez</h3>
+                                <p>21 curvas de leyenda. Subida de 13,8 km al 8,1%. Desde 1952, es el juez definitivo de las ambiciones amarillas. Sus curvas llevan nombres de campeones.</p>
+                            </div>
+                        </div>
+                        <div class="stage-card">
+                            <div class="stage-card-image" style="background: linear-gradient(135deg, #1a2a3a, #2a3a4a);">
+                                <i class="fas fa-wind"></i>
+                                <img src="imagenes/mont_ventoux.jpg" alt="Mont Ventoux" onerror="this.style.display='none';">
+                            </div>
+                            <div class="stage-card-body">
+                                <span class="stage-tag">Provenza</span>
+                                <h3>Mont Ventoux</h3>
+                                <p>El Gigante de Provenza. 1.909 metros de piedra caliza, viento y resistencia. Una de las ascensiones más duras del ciclismo mundial.</p>
+                            </div>
+                        </div>
+                        <div class="stage-card">
+                            <div class="stage-card-image" style="background: linear-gradient(135deg, #2a1a1a, #3a2a2a);">
+                                <i class="fas fa-bolt"></i>
+                                <img src="imagenes/tourmalet.jpg" alt="Col du Tourmalet" onerror="this.style.display='none';">
+                            </div>
+                            <div class="stage-card-body">
+                                <span class="stage-tag">Pirineos</span>
+                                <h3>Col du Tourmalet</h3>
+                                <p>El puerto más emblemático de los Pirineos. 2.115 metros de altitud con rampas del 10% que han partido el pelotón en mil pedazos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3><i class="fas fa-envelope"></i> Contacto</h3>
+                    <p>info@tourdefrancia.com</p>
+                    <p>+34 912 345 678</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Historia.html">Línea de Tiempo</a></li>
+                        <li><a href="tienda.html">Tienda Oficial</a></li>
+                        <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bicicletas A Lo Largo De La Historia.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="carrito-flotante" class="cart-box">
+        <div class="cart-header">
+            <span><i class="fas fa-shopping-bag"></i> Tu Cesta</span>
+            <button onclick="toggleCarrito()" aria-label="Cerrar carrito"><i class="fas fa-times"></i></button>
+        </div>
+        <ul id="lista-carrito"><li class="empty-msg">Tu cesta está vacía</li></ul>
+        <div class="cart-footer">
+            <p>Total: <strong><span id="total-precio">0</span> €</strong></p>
+            <button class="pay-btn" onclick="pagar()">Pagar Ahora</button>
+        </div>
+    </div>
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
